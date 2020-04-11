@@ -1,10 +1,15 @@
 <template>
   <div class="side-list" ref="sideList">
-    <div class="pin" ref="pin" @click="handleClickSwitch">
+    <div class="pin" ref="pin" @click.stop="handleClickSwitch">
       <span>{{ pinTxt }}</span>
     </div>
     <div class="container">
-      <div class="side-list-item" v-for="(item, i) in list" :key="i">
+      <div
+        class="side-list-item"
+        v-for="(item, i) in list"
+        :key="i"
+        @click.stop="handleClickSideItem(item.id)"
+      >
         <div class="img">
           <img :src="item.thumbnail" />
         </div>
@@ -15,7 +20,7 @@
 </template>
 <script>
 export default {
-  name: 'sideList',
+  name: "sideList",
   props: {
     list: {
       type: Array,
@@ -25,11 +30,11 @@ export default {
     },
     side: {
       type: String,
-      default: 'left'
+      default: "left"
     },
     pinTxt: {
       type: String,
-      default: ''
+      default: ""
     }
   },
   data() {
@@ -39,35 +44,49 @@ export default {
   },
   methods: {
     fixPin() {
-      if (this.side == 'left') {
-        this.$refs.pin.classList.add('left');
+      if (this.side == "left") {
+        this.$refs.pin.classList.add("left");
       } else {
-        this.$refs.pin.classList.add('right');
+        this.$refs.pin.classList.add("right");
       }
     },
     fixPosition() {
-      if (this.side == 'left') {
-        this.$refs.sideList.classList.add('left');
+      if (this.side == "left") {
+        this.$refs.sideList.classList.add("left");
       } else {
-        this.$refs.sideList.classList.add('right');
+        this.$refs.sideList.classList.add("right");
       }
+    },
+    hidePanel() {
+      this.isVisible = false;
+      this.$refs.sideList.classList.remove("show");
+      this.$emit("onSwitch", false);
     },
     handleClickSwitch() {
       this.isVisible = !this.isVisible;
       if (this.isVisible) {
-        this.$refs.sideList.classList.add('show');
+        this.$refs.sideList.classList.add("show");
       } else {
-        this.$refs.sideList.classList.remove('show');
+        this.$refs.sideList.classList.remove("show");
       }
+      this.$emit("onSwitch", this.isVisible);
+    },
+    handleClickSideItem(id) {
+      if (this.$route.query.id == id) return;
+      this.$router.push({ path: "/article", query: { id: id } });
+      this.hidePanel();
     }
   },
   mounted() {
     this.fixPin();
     this.fixPosition();
+    window.addEventListener("click", () => {
+      if (this.isVisible) this.hidePanel();
+    });
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .side-list {
   z-index: 2;
   color: #fff;
@@ -82,12 +101,14 @@ export default {
     left: -300px;
     &.show {
       left: 0;
+      z-index: 4;
     }
   }
   &.right {
     right: -300px;
     &.show {
       right: 0;
+      z-index: 4;
     }
   }
   .container {
@@ -100,14 +121,16 @@ export default {
     position: absolute;
     top: 25px;
     width: 20px;
-    height: 40px;
+    height: 50px;
     background: #66475a;
     cursor: pointer;
     span {
-      margin-left: 3px;
-      margin-top: 3px;
-      display: inline-block;
+      display: block;
       width: 14px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     &.left {
       right: -19px;
@@ -150,6 +173,27 @@ export default {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+  }
+}
+@media screen and (max-width: 321px) {
+  .side-list {
+    width: 260px;
+    padding: 0;
+    &.left {
+      left: -260px;
+    }
+    &.right {
+      right: -260px;
+    }
+    &-item {
+      padding: 8px;
+      .img {
+        margin-right: 8px;
+      }
+      span {
+        width: 206px;
+      }
     }
   }
 }

@@ -1,30 +1,29 @@
 <template>
   <div class="card">
     <div class="avatar">
-      <img src="../assets/avatar.jpg" alt="" />
+      <img src="../assets/avatar.jpg" alt />
     </div>
     <div class="intro">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate
-      assumenda ab nihil, dignissimos modi inventore ducimus ratione ea, autem
-      non unde necessitatibus ipsum reiciendis perferendis, repellat totam
-      consectetur voluptatem.
+      <p>Hi~我是7thSunday，如果你有任何问题或建议，欢迎联系我。</p>
+      <p>e-mail：1064578256@qq.com</p>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
 .card {
+  display: none;
   position: absolute;
   top: 60px;
-  background: #66475a;
+  background: #9c5a83;
   width: 250px;
-  height: 300px;
+  height: 260px;
   right: 0;
   &::after {
-    content: '';
+    content: "";
     display: block;
     border-style: solid;
     border-width: 10px;
-    border-color: #66475a transparent transparent #66475a;
+    border-color: #9c5a83 transparent transparent #9c5a83;
     position: absolute;
     top: -5px;
     right: 10px;
@@ -44,6 +43,22 @@
   }
   .intro {
     padding: 10px;
+    line-height: 1.8;
+  }
+}
+@media screen and (max-width: 769px) {
+  .card {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .card {
+    width: 200px;
+    .avatar {
+      width: 70px;
+      height: 70px;
+      margin: 10px auto;
+    }
   }
 }
 </style>

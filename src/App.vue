@@ -10,42 +10,58 @@
       :list="tutorialList"
       side="right"
       pinTxt="教程"
+      @onSwitch="handleOnSwitch"
     ></side-list>
     <side-list
       class="intro-list"
       :list="introList"
       side="left"
       pinTxt="说明"
+      @onSwitch="handleOnSwitch"
     ></side-list>
     <router-view />
+    <div class="footer">ARC @2020</div>
+    <div class="cover" v-show="showCover"></div>
   </div>
 </template>
 
 <script>
-import navbar from './components/navbar.vue';
-import sideList from '@/components/sideList';
-import axios from 'axios';
+import navbar from "./components/navbar.vue";
+import sideList from "@/components/sideList";
+import axios from "axios";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     navbar,
     sideList
   },
+  watch: {
+    $route: {
+      handler: function(val, oldVal) {
+        if (val.path == "/gallery") {
+          document.title = "ARC";
+        }
+      },
+      // 深度观察监听
+      deep: true
+    }
+  },
   data() {
     return {
       tutorialList: [],
-      introList: []
+      introList: [],
+      showCover: false
     };
   },
   methods: {
     fetchArticleList() {
-      axios.get('/data/index.json').then(res => {
+      axios.get("/ARC/data/index.json").then(res => {
         res.data.forEach(element => {
           switch (element.type) {
-            case 'intro':
+            case "intro":
               this.introList.push(element);
               break;
-            case 'tutorial':
+            case "tutorial":
               this.tutorialList.push(element);
               break;
             default:
@@ -53,6 +69,9 @@ export default {
           }
         });
       });
+    },
+    handleOnSwitch(flag) {
+      this.showCover = flag;
     }
   },
   mounted() {
@@ -65,6 +84,7 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   &::-webkit-scrollbar {
     /*滚动条整体样式*/
     width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
@@ -93,7 +113,7 @@ export default {
   }
 }
 html {
-  background-image: url('./assets/bg.jpg');
+  background-image: url("./assets/bg.jpg");
 }
 #arc {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -106,6 +126,37 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: auto;
+  overflow: hidden;
+}
+.footer {
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+.cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba($color: #000000, $alpha: 0.5);
+  z-index: 3;
+}
+@media screen and (max-width: 769px) {
+  * {
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px;
+    }
+  }
+  .footer {
+    font-size: 12px;
+    bottom: 5px;
+  }
 }
 </style>

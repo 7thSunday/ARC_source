@@ -5,24 +5,24 @@
 </template>
 <script>
 export default {
-  name: 'albumItem',
+  name: "albumItem",
   props: {
     path: {
       type: String,
-      default: ''
+      default: ""
     },
     title: {
       type: String,
-      default: ''
+      default: ""
     },
     id: {
       type: String,
-      default: ''
+      default: ""
     }
   },
   methods: {
     handleClickAlbumItem() {
-      this.$router.push({ path: '/article', query: { id: this.id } });
+      this.$router.push({ path: "/article", query: { id: this.id } });
     }
   }
 };
@@ -30,14 +30,15 @@ export default {
 <style lang="scss" scoped>
 .album-item {
   float: left;
+  font-size: 0;
   width: 80px;
   height: 80px;
   border-radius: 5px;
   overflow: hidden;
-  margin: 5px;
+  margin: 8px;
   border-style: solid;
   border-color: transparent;
-  border-width: 3px;
+  border-width: 4px;
   transition: 300ms;
   &:hover {
     border-color: #a87194;
@@ -45,6 +46,26 @@ export default {
   img {
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .album-item {
+    border-radius: 10px;
+    width: 76px;
+    height: 76px;
+    margin: 6px;
+  }
+}
+@media screen and (max-width: 361px) {
+  .album-item {
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .album-item {
+    width: 68px;
+    height: 68px;
+    margin: 3px;
   }
 }
 </style>

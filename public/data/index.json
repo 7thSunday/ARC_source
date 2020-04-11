@@ -1,435 +1,56 @@
 [
   {
-    "id": "001",
-    "title": "hei",
-    "type": "album",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
+    "id": "t03302020",
+    "title": "【明日方舟】黑 - 教程",
     "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
+    "thumbnail": "/ARC/data/thumbnails/schwarz.jpg"
   },
   {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
+    "id": "i03302020",
+    "title": "【明日方舟】黑 - 说明",
     "type": "intro",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
+    "thumbnail": "/ARC/data/thumbnails/schwarz.jpg"
   },
   {
-    "title": "hei",
+    "id": "a03302020",
+    "title": "【明日方舟】黑",
     "type": "album",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
+    "thumbnail": "/ARC/data/thumbnails/schwarz.jpg"
   },
   {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "intro",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
+    "id": "a12262019",
+    "title": "【东方project】秘封组",
     "type": "album",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
+    "thumbnail": "/ARC/data/thumbnails/rcs.jpg"
   },
   {
-    "title": "hei",
-    "type": "tutorial",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
-    "type": "intro",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
-  },
-  {
-    "title": "hei",
+    "id": "a09142018",
+    "title": "【东方project】主角组 真·东方游剧天特别制作",
     "type": "album",
-    "thumbnail": "/data/thumbnails/schwarz.jpg",
-    "path": "/data/001.json"
+    "thumbnail": "/ARC/data/thumbnails/marisaQ.jpg"
+  },
+  {
+    "id": "a09242017",
+    "title": "【东方project】射命丸文 报童装束",
+    "type": "album",
+    "thumbnail": "/ARC/data/thumbnails/Aya.jpg"
+  },
+  {
+    "id": "a04082017",
+    "title": "【小林家的龙女仆】托尔",
+    "type": "album",
+    "thumbnail": "/ARC/data/thumbnails/tooruQ.jpg"
+  },
+  {
+    "id": "a12262016",
+    "title": "【love live!】园田海未 浴衣",
+    "type": "album",
+    "thumbnail": "/ARC/data/thumbnails/umi.jpg"
+  },
+  {
+    "id": "a06232016",
+    "title": "【东方project】紫 香霖堂ver",
+    "type": "album",
+    "thumbnail": "/ARC/data/thumbnails/yukariQ.jpg"
   }
 ]
