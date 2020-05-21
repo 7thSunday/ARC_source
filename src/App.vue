@@ -5,22 +5,23 @@
       <router-link to="/about">About</router-link>
     </div>-->
     <navbar></navbar>
-    <side-list
+    <!-- <side-list
       class="tutorial-list"
       :list="tutorialList"
       side="right"
-      pinTxt="教程"
+      title="教程"
       @onSwitch="handleOnSwitch"
     ></side-list>
     <side-list
       class="intro-list"
       :list="introList"
       side="left"
-      pinTxt="说明"
+      title="说明"
       @onSwitch="handleOnSwitch"
-    ></side-list>
+    ></side-list>-->
+    <side-list :list="sideListData" side="left" title="说明&教程" @onSwitch="handleOnSwitch"></side-list>
     <router-view />
-    <div class="footer">ARC @2020</div>
+    <!-- <div class="footer">ARC @2020</div> -->
     <div class="cover" v-show="showCover"></div>
   </div>
 </template>
@@ -48,8 +49,9 @@ export default {
   },
   data() {
     return {
-      tutorialList: [],
-      introList: [],
+      // tutorialList: [],
+      // introList: [],
+      sideListData: [],
       showCover: false
     };
   },
@@ -57,16 +59,19 @@ export default {
     fetchArticleList() {
       axios.get("/ARC/data/index.json").then(res => {
         res.data.forEach(element => {
-          switch (element.type) {
-            case "intro":
-              this.introList.push(element);
-              break;
-            case "tutorial":
-              this.tutorialList.push(element);
-              break;
-            default:
-              break;
+          if (element.type != "album") {
+            this.sideListData.push(element);
           }
+          // switch (element.type) {
+          //   case "intro":
+          //     this.introList.push(element);
+          //     break;
+          //   case "tutorial":
+          //     this.tutorialList.push(element);
+          //     break;
+          //   default:
+          //     break;
+          // }
         });
       });
     },

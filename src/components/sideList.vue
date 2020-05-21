@@ -1,8 +1,9 @@
 <template>
   <div class="side-list" ref="sideList">
     <div class="pin" ref="pin" @click.stop="handleClickSwitch">
-      <span>{{ pinTxt }}</span>
+      <span ref="expandIcon" class="iconfont icon-expand"></span>
     </div>
+    <div class="title">{{title}}</div>
     <div class="container">
       <div
         class="side-list-item"
@@ -32,7 +33,7 @@ export default {
       type: String,
       default: "left"
     },
-    pinTxt: {
+    title: {
       type: String,
       default: ""
     }
@@ -83,6 +84,14 @@ export default {
     window.addEventListener("click", () => {
       if (this.isVisible) this.hidePanel();
     });
+    // this.$refs.sideList.addEventListener("transitionend", () => {
+    //   let c = this.$refs.expandIcon.classList;
+    //   if (c.contains("rotate")) {
+    //     this.$refs.expandIcon.classList.toggle("rotate");
+    //   } else {
+    //     this.$refs.expandIcon.classList.add("rotate");
+    //   }
+    // });
   }
 };
 </script>
@@ -95,8 +104,11 @@ export default {
   width: 300px;
   top: 100px;
   height: 70%;
-  padding: 10px 0;
+  padding: 5px 0 10px 0;
   transition: 300ms;
+  &.show .pin span {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
   &.left {
     left: -300px;
     &.show {
@@ -111,9 +123,17 @@ export default {
       z-index: 4;
     }
   }
+  .title {
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+  }
   .container {
+    position: absolute;
     width: 100%;
-    height: 100%;
+    top: 30px;
+    bottom: 0;
     overflow: auto;
   }
   .pin {
@@ -124,6 +144,8 @@ export default {
     height: 50px;
     background: #66475a;
     cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     span {
       display: block;
       width: 14px;
@@ -131,16 +153,16 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      // &.rotate {
+      //   transform: translate(-50%, -50%) rotate(180deg);
+      // }
     }
     &.left {
       right: -19px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
     }
     &.right {
       left: -19px;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      transform: rotate(180deg);
     }
   }
   &-item {

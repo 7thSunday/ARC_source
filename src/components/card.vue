@@ -13,7 +13,7 @@
 .card {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 50px;
   background: #9c5a83;
   width: 250px;
   height: 260px;

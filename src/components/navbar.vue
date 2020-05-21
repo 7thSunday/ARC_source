@@ -40,16 +40,20 @@ export default {
   background: #755669;
   z-index: 2;
   .logo {
-    margin-top: 10px;
-    height: 30px;
+    height: 100%;
+    padding: 10px;
     cursor: pointer;
     float: left;
+    transition: 0.3s;
     * {
       vertical-align: middle;
     }
     img {
       height: 100%;
-      margin: 0 10px;
+      margin-right: 10px;
+    }
+    &:hover {
+      background: #643051;
     }
   }
   .admin {
@@ -78,9 +82,6 @@ export default {
   .nav {
     height: 40px;
     font-size: 14px;
-    .logo {
-      height: 20px;
-    }
     .admin {
       right: 10px;
       .avatar {

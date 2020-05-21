@@ -42,10 +42,10 @@ export default {
   top: 60px;
   left: 0;
   right: 0;
-  bottom: 35px;
+  bottom: 10px;
+  overflow: auto;
   .content {
     height: 100%;
-    overflow: auto;
     width: 800px;
     margin: 0 auto;
     color: #fff;
