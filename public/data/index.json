@@ -1,5 +1,23 @@
 [
   {
+    "id": "t06182020",
+    "title": "【碧蓝航线】圣路易斯 舰装&轴 - 教程",
+    "type": "tutorial",
+    "thumbnail": "/ARC/data/thumbnails/stl.jpg"
+  },
+  {
+    "id": "i06182020",
+    "title": "【碧蓝航线】圣路易斯 - 说明",
+    "type": "intro",
+    "thumbnail": "/ARC/data/thumbnails/stl.jpg"
+  },
+  {
+    "id": "a06182020",
+    "title": "【碧蓝航线】圣路易斯",
+    "type": "album",
+    "thumbnail": "/ARC/data/thumbnails/stl.jpg"
+  },
+  {
     "id": "t03302020",
     "title": "【明日方舟】黑 - 教程",
     "type": "tutorial",

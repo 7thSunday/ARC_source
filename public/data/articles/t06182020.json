@@ -1,0 +1,5 @@
+{
+  "title": "【碧蓝航线】圣路易斯 舰装&轴 - 教程",
+  "type": "tutorial",
+  "content": "<p>虽然舰装部分提供了PDO，不过有些地方还是稍微说一下。</p><p>炮管底部中间开孔，把轴串过去。</p><img src='/ARC/data/images/stl_t/01.jpg' /><p>炮塔剪下来，把炮管之间的分隔部分粘好。</p><img src='/ARC/data/images/stl_t/02.jpg' /><p>背面是这样子的。</p><img src='/ARC/data/images/stl_t/03.jpg' /><p>然后把炮管卡进去。</p><img src='/ARC/data/images/stl_t/04.jpg' /><p>然后把炮塔封闭起来，炮管的轴两端粘在内部。</p><p>接下来是炮塔的轴。</p><p>每个轴由四个零件组成。先上原理图：</p><img src='/ARC/data/images/stl_t/05.jpg' /><p>侧视图看四个零件，红色箭头表示胶水粘贴的部分。最小的那一片被卡在两片大的中间，同时通过一个开孔和最右侧那一片连接，最右边那片就可以旋转且不会脱出。</p><p>先把零件剪下来。</p><img src='/ARC/data/images/stl_t/06.jpg' /><p>画有加号的那一片，按照最中间的那个小圆开洞。然后那一片有三个圆的，在大圆和中圆之间抹胶水，角落也抹上，注意不要抹到中圆内部去了。先抹三个角：</p><img src='/ARC/data/images/stl_t/07.jpg' /><p>粘死三个角后，把最小那一片塞进去，然后封死最后一个角。</p><img src='/ARC/data/images/stl_t/08.jpg' /><p>接着在最小那一片上抹胶水，粘上最后一个零件。然后把四个角剪掉就行了。</p>"
+}
