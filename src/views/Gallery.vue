@@ -34,14 +34,14 @@
 </template>
 
 <script>
-import axios from "axios";
+import util from "../util.js";
 import albumItem from "@/components/albumItem.vue";
 import searchItem from "@/components/searchItem.vue";
 export default {
   name: "Gallery",
   components: {
     albumItem,
-    searchItem
+    searchItem,
   },
   data() {
     return {
@@ -49,25 +49,25 @@ export default {
       albumList: [],
       articleList: [],
       searchList: [],
-      searchMode: false
+      searchMode: false,
     };
   },
   methods: {
-    fetchArticleList() {
-      axios.get("/ARC/data/index.json").then(res => {
-        this.articleList = res.data;
-        this.albumList = res.data.filter(item => item.type == "album");
-        // res.data.forEach(element => {
-        //   switch (element.type) {
-        //     case 'album':
-        //       this.albumList.push(element);
-        //       break;
-        //     default:
-        //       break;
-        //   }
-        // });
-      });
-    },
+    // fetchArticleList() {
+    //   axios.get("/ARC/data/index.json").then(res => {
+    //     this.articleList = res.data;
+    //     this.albumList = res.data.filter(item => item.type == "album");
+    //     // res.data.forEach(element => {
+    //     //   switch (element.type) {
+    //     //     case 'album':
+    //     //       this.albumList.push(element);
+    //     //       break;
+    //     //     default:
+    //     //       break;
+    //     //   }
+    //     // });
+    //   });
+    // },
     handleInput() {
       if (!this.keywords) {
         this.searchMode = false;
@@ -83,11 +83,24 @@ export default {
           this.searchList.push(item);
         }
       }
-    }
+    },
   },
   mounted() {
-    this.fetchArticleList();
-  }
+    util.fetchArticleList((res) => {
+      this.articleList = res.data;
+      this.albumList = res.data.filter((item) => item.type == "album");
+      // res.data.forEach(element => {
+      //   switch (element.type) {
+      //     case 'album':
+      //       this.albumList.push(element);
+      //       break;
+      //     default:
+      //       break;
+      //   }
+      // });
+    });
+    // this.fetchArticleList();
+  },
 };
 </script>
 

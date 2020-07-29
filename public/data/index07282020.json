@@ -1,5 +1,11 @@
 [
   {
+    "id": "a07282020",
+    "title": "【动物朋友】薮猫",
+    "type": "album",
+    "thumbnail": "/ARC/data/thumbnails/serval.jpg"
+  },
+  {
     "id": "t06182020",
     "title": "【碧蓝航线】圣路易斯 舰装&轴 - 教程",
     "type": "tutorial",

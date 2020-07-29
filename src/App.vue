@@ -29,7 +29,7 @@
 <script>
 import navbar from "./components/navbar.vue";
 import sideList from "@/components/sideList";
-import axios from "axios";
+import util from "./util.js";
 export default {
   name: "App",
   components: {
@@ -56,31 +56,48 @@ export default {
     };
   },
   methods: {
-    fetchArticleList() {
-      axios.get("/ARC/data/index.json").then(res => {
-        res.data.forEach(element => {
-          if (element.type != "album") {
-            this.sideListData.push(element);
-          }
-          // switch (element.type) {
-          //   case "intro":
-          //     this.introList.push(element);
-          //     break;
-          //   case "tutorial":
-          //     this.tutorialList.push(element);
-          //     break;
-          //   default:
-          //     break;
-          // }
-        });
-      });
-    },
+    // fetchArticleList() {
+    //   axios.get("/ARC/data/index.json").then(res => {
+    //     res.data.forEach(element => {
+    //       if (element.type != "album") {
+    //         this.sideListData.push(element);
+    //       }
+    //       // switch (element.type) {
+    //       //   case "intro":
+    //       //     this.introList.push(element);
+    //       //     break;
+    //       //   case "tutorial":
+    //       //     this.tutorialList.push(element);
+    //       //     break;
+    //       //   default:
+    //       //     break;
+    //       // }
+    //     });
+    //   });
+    // },
     handleOnSwitch(flag) {
       this.showCover = flag;
     }
   },
   mounted() {
-    this.fetchArticleList();
+    util.fetchArticleList(res => {
+      res.data.forEach(element => {
+        if (element.type != "album") {
+          this.sideListData.push(element);
+        }
+        // switch (element.type) {
+        //   case "intro":
+        //     this.introList.push(element);
+        //     break;
+        //   case "tutorial":
+        //     this.tutorialList.push(element);
+        //     break;
+        //   default:
+        //     break;
+        // }
+      });
+    });
+    // this.fetchArticleList();
   }
 };
 </script>
