@@ -1,6 +1,12 @@
 <template>
-  <div class="album-item" @click="handleClickAlbumItem">
-    <img :src="path" :alt="title" />
+  <div
+    class="album-item"
+    @click="handleClickAlbumItem"
+  >
+    <img
+      :src="path"
+      :alt="title"
+    />
   </div>
 </template>
 <script>
@@ -9,22 +15,22 @@ export default {
   props: {
     path: {
       type: String,
-      default: ""
+      default: "",
     },
     title: {
       type: String,
-      default: ""
+      default: "",
     },
     id: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   methods: {
     handleClickAlbumItem() {
       this.$router.push({ path: "/article", query: { id: this.id } });
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -34,7 +40,6 @@ export default {
   width: 80px;
   height: 80px;
   border-radius: 5px;
-  overflow: hidden;
   margin: 8px;
   border-style: solid;
   border-color: transparent;
@@ -42,6 +47,7 @@ export default {
   transition: 300ms;
   &:hover {
     border-color: #a87194;
+    transform: scale(1.2);
   }
   img {
     width: 100%;
@@ -54,6 +60,9 @@ export default {
     width: 76px;
     height: 76px;
     margin: 6px;
+    &:hover {
+      transform: scale(1);
+    }
   }
 }
 @media screen and (max-width: 361px) {

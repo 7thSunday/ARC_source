@@ -10,7 +10,10 @@
         clearable
       ></el-input>
     </div>
-    <div class="search-list" v-if="searchMode">
+    <div
+      class="search-list"
+      v-if="searchMode"
+    >
       <search-item
         v-for="item in searchList"
         :key="item.id"
@@ -19,9 +22,15 @@
         :title="item.title"
         :id="item.id"
       ></search-item>
-      <div class="hint" v-if="searchList.length==0">什么都没有~换个关键字试试看吧。</div>
+      <div
+        class="hint"
+        v-if="searchList.length==0"
+      >什么都没有~换个关键字试试看吧。</div>
     </div>
-    <div class="album-list" v-else>
+    <div
+      class="album-list"
+      v-else-if="isGridView"
+    >
       <album-item
         v-for="(item, i) in albumList"
         :key="i"
@@ -30,6 +39,19 @@
         :id="item.id"
       ></album-item>
     </div>
+    <div
+      class="search-list"
+      v-else
+    >
+      <search-item
+        v-for="item in articleList"
+        :key="item.id"
+        :thumbnail="item.thumbnail"
+        :type="item.type"
+        :title="item.title"
+        :id="item.id"
+      ></search-item>
+    </div>
   </div>
 </template>
 
@@ -37,11 +59,17 @@
 import util from "../util.js";
 import albumItem from "@/components/albumItem.vue";
 import searchItem from "@/components/searchItem.vue";
+import { mapState } from "vuex";
 export default {
   name: "Gallery",
   components: {
     albumItem,
     searchItem,
+  },
+  computed: {
+    ...mapState({
+      isGridView: (state) => state.isGridView,
+    }),
   },
   data() {
     return {

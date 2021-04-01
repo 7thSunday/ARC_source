@@ -5,6 +5,15 @@
       <router-link to="/about">About</router-link>
     </div>-->
     <navbar></navbar>
+    <div class="admin">
+      <div class="avatar">
+        <img
+          src="./assets/avatar.jpg"
+          alt
+        />
+      </div>
+      <card></card>
+    </div>
     <!-- <side-list
       class="tutorial-list"
       :list="tutorialList"
@@ -19,43 +28,63 @@
       title="说明"
       @onSwitch="handleOnSwitch"
     ></side-list>-->
-    <side-list :list="sideListData" side="left" title="说明&教程" @onSwitch="handleOnSwitch"></side-list>
+    <side-list
+      :list="sideListData"
+      side="left"
+      title="说明&教程"
+      @onSwitch="handleOnSwitch"
+    ></side-list>
     <router-view />
     <!-- <div class="footer">ARC @2020</div> -->
-    <div class="cover" v-show="showCover"></div>
+    <div
+      class="cover"
+      v-show="showCover"
+    ></div>
   </div>
 </template>
 
 <script>
-import navbar from "./components/navbar.vue";
+import navbar from "@/components/navbar.vue";
+import card from "@/components/card";
 import sideList from "@/components/sideList";
 import util from "./util.js";
+import { mapMutations, mapState } from "vuex";
 export default {
   name: "App",
   components: {
     navbar,
-    sideList
+    sideList,
+    card,
   },
   watch: {
     $route: {
-      handler: function(val, oldVal) {
-        if (val.path == "/gallery") {
+      handler: function (val, oldVal) {
+        if (val.path == "/gallery" || val.path == "/") {
           document.title = "ARC";
+          this.changeGalleryFlag(true);
+        } else {
+          this.changeGalleryFlag(false);
         }
       },
       // 深度观察监听
-      deep: true
-    }
+      deep: true,
+    },
+  },
+  computed: {
+    ...mapState({
+      isGridView: (state) => state.isGridView,
+    }),
   },
   data() {
     return {
       // tutorialList: [],
       // introList: [],
       sideListData: [],
-      showCover: false
+      showCover: false,
     };
   },
   methods: {
+    ...mapMutations(["changeGalleryFlag"]),
     // fetchArticleList() {
     //   axios.get("/ARC/data/index.json").then(res => {
     //     res.data.forEach(element => {
@@ -77,11 +106,11 @@ export default {
     // },
     handleOnSwitch(flag) {
       this.showCover = flag;
-    }
+    },
   },
   mounted() {
-    util.fetchArticleList(res => {
-      res.data.forEach(element => {
+    util.fetchArticleList((res) => {
+      res.data.forEach((element) => {
         if (element.type != "album") {
           this.sideListData.push(element);
         }
@@ -98,7 +127,7 @@ export default {
       });
     });
     // this.fetchArticleList();
-  }
+  },
 };
 </script>
 
@@ -149,6 +178,29 @@ html {
   right: 0;
   bottom: 0;
   overflow: hidden;
+  .admin {
+    color: #fff;
+    position: fixed;
+    left: 10px;
+    bottom: 50px;
+    z-index: 2;
+    &:hover .card {
+      display: block;
+    }
+    .avatar {
+      position: absolute;
+      // top: 5px;
+      // right: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
 .footer {
   position: absolute;

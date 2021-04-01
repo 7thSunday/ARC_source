@@ -1,33 +1,56 @@
 <template>
   <div class="nav">
-    <div class="logo" @click="handleClickLogo">
-      <img alt="logo" src="../assets/logo.png" />
+    <div
+      class="logo"
+      @click="handleClickLogo"
+    >
+      <img
+        alt="logo"
+        src="../assets/logo.png"
+      />
       <span>Atelier Red Crow</span>
     </div>
-    <div class="admin">
-      <div class="avatar">
-        <img src="../assets/avatar.jpg" alt />
-      </div>
-      <card></card>
+    <div
+      class="btn-switch-view"
+      v-show="isGallery"
+      @click="handleClickSwitchView"
+    >
+      <i
+        class="iconfont icon-grid"
+        v-if="isGridView"
+      ></i>
+      <i
+        class="iconfont icon-list"
+        v-else
+      ></i>
     </div>
   </div>
 </template>
 <script>
-import card from "@/components/card";
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "navbar",
-  components: { card },
+  computed: {
+    ...mapState({
+      isGridView: (state) => state.isGridView,
+      isGallery: (state) => state.isGallery,
+    }),
+  },
   data() {
     return {
       // showCard: false
     };
   },
   methods: {
+    ...mapMutations(["changeView"]),
     handleClickLogo() {
       if (this.$router.currentRoute.path == "/gallery") return;
       this.$router.push({ path: "/gallery" });
-    }
-  }
+    },
+    handleClickSwitchView() {
+      this.changeView();
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -39,6 +62,11 @@ export default {
   color: #fff;
   background: #755669;
   z-index: 2;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
   .logo {
     height: 100%;
     padding: 10px;
@@ -56,25 +84,11 @@ export default {
       background: #643051;
     }
   }
-  .admin {
-    position: absolute;
-    right: 40px;
-    top: 0;
-    &:hover .card {
-      display: block;
-    }
-    .avatar {
-      position: absolute;
-      top: 5px;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-      }
+  .btn-switch-view {
+    float: right;
+    margin: 9px;
+    .iconfont {
+      font-size: 30px;
     }
   }
 }

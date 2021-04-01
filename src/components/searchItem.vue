@@ -1,9 +1,17 @@
 <template>
-  <div class="search-item" @click="handleClickSearchItem">
+  <div
+    class="search-item"
+    @click="handleClickSearchItem"
+  >
     <div class="img">
       <img :src="thumbnail" />
     </div>
-    <div class="type">{{getTypeCtx}}</div>
+    <div class="type">
+      <i
+        class="iconfont"
+        :class="getTypeIcon"
+      ></i>
+    </div>
     <div class="title">{{title}}</div>
   </div>
 </template>
@@ -12,38 +20,38 @@ export default {
   props: {
     id: {
       type: String,
-      default: ""
+      default: "",
     },
     thumbnail: {
       type: String,
-      default: ""
+      default: "",
     },
     type: {
       type: String,
-      default: ""
+      default: "",
     },
     title: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   computed: {
-    getTypeCtx() {
+    getTypeIcon() {
       switch (this.type) {
         case "album":
-          return "相册";
+          return "icon-photo";
         case "intro":
-          return "说明";
+          return "icon-document";
         case "tutorial":
-          return "教程";
+          return "icon-scissors";
       }
-    }
+    },
   },
   methods: {
     handleClickSearchItem() {
       this.$router.push({ path: "/article", query: { id: this.id } });
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss">
@@ -76,7 +84,9 @@ export default {
   }
   .type {
     width: 50px;
-    color: rgb(243, 112, 112);
+    color: rgb(240, 172, 172);
+    display: flex;
+    justify-content: center;
   }
   .title {
     width: 650px;
