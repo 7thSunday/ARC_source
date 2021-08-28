@@ -1,6 +1,9 @@
 <template>
   <div class="article">
-    <div class="content" v-html="htmlTxt"></div>
+    <div
+      class="content"
+      v-html="htmlTxt"
+    ></div>
   </div>
 </template>
 <script>
@@ -9,31 +12,31 @@ export default {
   name: "Article",
   watch: {
     $route: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         this.fetchArticle();
       },
       // 深度观察监听
-      deep: true
-    }
+      deep: true,
+    },
   },
   data() {
     return {
-      htmlTxt: ""
+      htmlTxt: "",
     };
   },
   methods: {
     fetchArticle() {
       let path = `/ARC/data/articles/${this.$route.query.id}.json`;
-      axios.get(path).then(res => {
+      axios.get(path).then((res) => {
         document.title = `ARC - ${res.data.title}`;
         this.htmlTxt = `<h2>${res.data.title}</h2>`;
         this.htmlTxt += res.data.content;
       });
-    }
+    },
   },
   created() {
     this.fetchArticle();
-  }
+  },
 };
 </script>
 <style lang="scss">
@@ -42,7 +45,7 @@ export default {
   top: 60px;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: 40px;
   overflow: auto;
   .content {
     height: 100%;
